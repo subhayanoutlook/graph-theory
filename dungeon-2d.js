@@ -1,6 +1,6 @@
-//2d dungeon representation in 5x7 matrix
 // S & E denotes starting, ending points respectively
-// task is to find a way out with minimum possible moves
+// task is to find a way out with minimum possible moves,
+// avoid # only can move thourgh . (dots)
 // bfs is the approach behind solution !
 
 // [
@@ -19,6 +19,7 @@
    offsets for row is [-1, +1, 0, 0] for column [0, 0, -1, +1]
 */
 
+//2d dungeon representation in 5x7 matrix
 const arr = Array(5)
   .fill()
   .map(() => Array(7).fill("."));
