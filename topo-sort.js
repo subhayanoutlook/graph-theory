@@ -73,6 +73,9 @@ const topoSortKahns = (graph) => {
       if (inDegree[node] === 0) queue.push(node);
     }
   }
+  if (ordering.length != Object.keys(graph).length) {
+    return "Oops ! cycles detected 😵";
+  }
   return ordering;
 };
 
