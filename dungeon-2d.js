@@ -44,6 +44,8 @@ const getMeOut = (dungeon, start, end) => {
     dungeon,
     end
   );
+  if (startRow === null || endRow === null)
+    return "start or end is incorrectly specified";
   const dr = [-1, 1, 0, 0]; //direction offsets for row
   const dc = [0, 0, -1, 1]; //direction offsets for column
   const visited = {};
@@ -78,6 +80,7 @@ const getMeOut = (dungeon, start, end) => {
 };
 
 const findSymbolIndex = (dungeon, symbol) => {
+  symbol = symbol.trim();
   for (const [i, row] of dungeon.entries()) {
     if (row.includes(symbol)) {
       return { row: i, col: row.indexOf(symbol) };
