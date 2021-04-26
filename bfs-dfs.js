@@ -18,7 +18,7 @@ const depthFirstTraversalIterative = (graph, root = 0) => {
   while (stack.length > 0) {
     const curr = stack.pop();
     console.log(curr);
-    for (const node of [].slice.call(graph[curr])) {
+    for (const node of [].slice.call(graph[curr] ?? [])) {
       if (node in visited) continue;
       stack.push(node);
       visited[node] = true;
@@ -31,7 +31,7 @@ const depthFirstTraversalRecursive = (graph, root = 0, visited = {}) => {
   if (root === null) return;
   console.log(root);
   visited[root] = true;
-  for (const node of [].slice.call(graph[root])) {
+  for (const node of [].slice.call(graph[root] ?? [])) {
     if (node in visited) continue;
     depthFirstTraversalRecursive(graph, node, visited);
   }
@@ -45,7 +45,7 @@ const breadthFirstTraversal = (graph, root = 0) => {
   while (queue.length > 0) {
     const curr = queue.shift();
     console.log(curr);
-    for (const node of [].slice.call(graph[curr])) {
+    for (const node of [].slice.call(graph[curr] ?? [])) {
       if (node in visited) continue;
       queue.push(node);
       visited[node] = true;
@@ -61,7 +61,7 @@ const shortestPathBfs = (graph, start = 0, end) => {
   while (queue.length > 0) {
     const curr = queue.pop();
     if (curr === end) return reconstructPath(visited, start, end);
-    for (const node of [].slice.call(graph[curr])) {
+    for (const node of [].slice.call(graph[curr] ?? [])) {
       if (node in visited) continue;
       queue.push(node);
       visited[node] = curr;
