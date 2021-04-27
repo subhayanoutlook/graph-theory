@@ -23,3 +23,4 @@ node ./dungeon-2d.js
 - [Graph Traversal using BFS & DFS](https://github.com/subhayanoutlook/graph-theory/blob/master/bfs-dfs.js)
 - [Dungeon 2D Solution (BFS)](https://github.com/subhayanoutlook/graph-theory/blob/master/dungeon-2d.js)
 - [Topological Sort (DFS & Kahn's)](https://github.com/subhayanoutlook/graph-theory/blob/master/topo-sort.js)
+- [Dijkstra](https://github.com/subhayanoutlook/graph-theory/blob/master/dijkstra.js)
